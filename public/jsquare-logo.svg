@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 520" fill="none">
+  <!-- Blood Drop Shape with White Swoosh Highlight -->
+  <g id="blood-drop">
+    <!-- Main Red Drop Silhouette -->
+    <path d="M250 15 C250 15 375 185 375 320 C375 390 319 445 250 445 C181 445 125 390 125 320 C125 185 250 15 250 15 Z" fill="#E60000"/>
+    
+    <!-- White Crescent Highlight Swoosh on Left Contour -->
+    <path d="M250 40 C220 95 145 235 145 325 C145 385 180 430 225 440 C190 435 160 395 160 335 C160 250 228 120 250 40 Z" fill="#FFFFFF" opacity="0.95"/>
+    
+    <!-- Inner Red Fill for Swoosh Inner Boundary -->
+    <path d="M245 80 C230 125 178 240 178 328 C178 378 198 418 230 432 C205 422 190 382 190 332 C190 258 235 148 245 80 Z" fill="#E60000"/>
+  </g>
+
+  <!-- Microscope Detailed Illustration Inside Drop -->
+  <g id="microscope" transform="translate(185, 125)">
+    <!-- Microscope Base (White with metallic shadow) -->
+    <ellipse cx="65" cy="225" rx="55" ry="18" fill="#CBD5E1"/>
+    <path d="M25 220 C25 200 45 185 68 185 C92 185 110 200 110 220 C110 232 90 238 68 238 C42 238 25 232 25 220 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="3"/>
+    
+    <!-- Arm / Stand -->
+    <path d="M42 205 C42 165 48 115 75 95 C92 82 108 92 105 112 C102 130 92 145 78 152 C70 156 68 175 68 205 Z" fill="#F8FAFC" stroke="#0F172A" stroke-width="3.5"/>
+    <path d="M52 195 C52 165 56 128 78 112 C88 105 95 110 94 122 C92 138 84 148 72 155 C65 160 62 175 62 195 Z" fill="#E2E8F0"/>
+
+    <!-- Coarse & Fine Focus Adjustment Knobs -->
+    <circle cx="48" cy="190" r="14" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="48" cy="190" r="8" fill="#475569"/>
+    <circle cx="48" cy="190" r="4" fill="#94A3B8"/>
+
+    <!-- Substage Condenser & Light Source Housing -->
+    <rect x="75" y="172" width="22" height="15" rx="3" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
+    <path d="M78 187 L94 187 L90 198 L82 198 Z" fill="#475569"/>
+
+    <!-- Stage (Black / Metallic Dark Slate Platform) -->
+    <path d="M55 162 L125 162 L118 174 L48 174 Z" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
+    <!-- Stage Clip & Slide Glass with sample -->
+    <rect x="68" y="160" width="38" height="4" rx="1" fill="#E2E8F0" stroke="#0F172A" stroke-width="1.5"/>
+    <rect x="82" y="161" width="10" height="2" rx="0.5" fill="#E60000"/>
+
+    <!-- Objective Revolving Nosepiece / Turret -->
+    <path d="M72 125 L108 125 L100 138 L80 138 Z" fill="#334155" stroke="#0F172A" stroke-width="2.5"/>
+    
+    <!-- Objective Lenses -->
+    <!-- Center Objective Lens (Active with red ring) -->
+    <rect x="85" y="138" width="10" height="16" rx="2" fill="#E2E8F0" stroke="#0F172A" stroke-width="2"/>
+    <rect x="85" y="144" width="10" height="3" fill="#E60000"/>
+    <path d="M87 154 L93 154 L91 159 L89 159 Z" fill="#0F172A"/>
+
+    <!-- Angled Side Objectives -->
+    <path d="M76 138 L70 148 L76 151 L81 140 Z" fill="#94A3B8" stroke="#0F172A" stroke-width="1.5"/>
+    <path d="M104 138 L110 148 L104 151 L99 140 Z" fill="#94A3B8" stroke="#0F172A" stroke-width="1.5"/>
+
+    <!-- Head & Binocular Eyepiece Tubes (Angled up to the right) -->
+    <path d="M80 92 L105 78 L122 92 L96 106 Z" fill="#F8FAFC" stroke="#0F172A" stroke-width="3"/>
+    
+    <!-- Eyepiece Cylinders -->
+    <path d="M102 78 L128 58 L138 68 L114 86 Z" fill="#1E293B" stroke="#0F172A" stroke-width="2.5"/>
+    <path d="M115 72 L140 52 L150 62 L127 80 Z" fill="#1E293B" stroke="#0F172A" stroke-width="2.5"/>
+    
+    <!-- Rubber Eyecup Tops -->
+    <ellipse cx="134" cy="62" rx="7" ry="5" transform="rotate(-38 134 62)" fill="#334155" stroke="#0F172A" stroke-width="2"/>
+    <ellipse cx="146" cy="56" rx="7" ry="5" transform="rotate(-38 146 56)" fill="#334155" stroke="#0F172A" stroke-width="2"/>
+    <circle cx="134" cy="62" r="2.5" fill="#67E8F9"/>
+    <circle cx="146" cy="56" r="2.5" fill="#67E8F9"/>
+  </g>
+
+  <!-- Typography: J SQUARE in Bold Slanted Brand Green -->
+  <g id="brand-text">
+    <text x="250" y="475" 
+          font-family="system-ui, -apple-system, 'Arial Black', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          font-style="italic" 
+          letter-spacing="1" 
+          text-anchor="middle" 
+          fill="#008F3F">
+      J SQUARE
+    </text>
+
+    <!-- Horizontal Lines & Subtitle: — Lab & Diagnostic — -->
+    <g transform="translate(0, 502)">
+      <!-- Left Line Rule -->
+      <line x1="55" y1="-8" x2="115" y2="-8" stroke="#008F3F" stroke-width="3" stroke-linecap="round"/>
+      
+      <!-- Subtitle Text -->
+      <text x="250" y="0" 
+            font-family="system-ui, -apple-system, sans-serif" 
+            font-size="24" 
+            font-weight="800" 
+            letter-spacing="0.5" 
+            text-anchor="middle" 
+            fill="#10243A">
+        Lab &amp; Diagnostic
+      </text>
+      
+      <!-- Right Line Rule -->
+      <line x1="385" y1="-8" x2="445" y2="-8" stroke="#008F3F" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

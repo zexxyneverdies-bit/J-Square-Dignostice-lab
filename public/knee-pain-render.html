@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 675px;
+    overflow: hidden;
+    background: #040814;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+<svg width='1200' height='675' viewBox='0 0 1200 675' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id='bgGrad' cx='45%' cy='52%' r='65%'>
+      <stop offset='0%' stop-color='#112347' />
+      <stop offset='45%' stop-color='#08132B' />
+      <stop offset='80%' stop-color='#040917' />
+      <stop offset='100%' stop-color='#02050D' />
+    </radialGradient>
+
+    <!-- Athletic Lighting Vignette -->
+    <radialGradient id='spotlight' cx='48%' cy='54%' r='40%'>
+      <stop offset='0%' stop-color='#1E3A8A' stop-opacity='0.25' />
+      <stop offset='60%' stop-color='#0F172A' stop-opacity='0.1' />
+      <stop offset='100%' stop-color='#020617' stop-opacity='0' />
+    </radialGradient>
+
+    <!-- Skin Gradients (Warm Indian Skin Tone) -->
+    <linearGradient id='thighSkin' x1='20%' y1='0%' x2='80%' y2='100%'>
+      <stop offset='0%' stop-color='#8C4D2E' />
+      <stop offset='25%' stop-color='#B06A46' />
+      <stop offset='50%' stop-color='#C47D57' />
+      <stop offset='75%' stop-color='#9F5A37' />
+      <stop offset='100%' stop-color='#6E351B' />
+    </linearGradient>
+
+    <linearGradient id='leftThighSkin' x1='30%' y1='0%' x2='70%' y2='100%'>
+      <stop offset='0%' stop-color='#5C2D18' />
+      <stop offset='40%' stop-color='#7E4226' />
+      <stop offset='100%' stop-color='#451E0E' />
+    </linearGradient>
+
+    <linearGradient id='calfSkin' x1='15%' y1='0%' x2='85%' y2='100%'>
+      <stop offset='0%' stop-color='#A45E3B' />
+      <stop offset='30%' stop-color='#BD7551' />
+      <stop offset='60%' stop-color='#924F2F' />
+      <stop offset='100%' stop-color='#5A2A14' />
+    </linearGradient>
+
+    <linearGradient id='leftCalfSkin' x1='20%' y1='0%' x2='80%' y2='100%'>
+      <stop offset='0%' stop-color='#5A2B15' />
+      <stop offset='50%' stop-color='#743B21' />
+      <stop offset='100%' stop-color='#3D1809' />
+    </linearGradient>
+
+    <!-- Hand Gradients -->
+    <linearGradient id='handGrad' x1='0%' y1='20%' x2='100%' y2='80%'>
+      <stop offset='0%' stop-color='#C47E58' />
+      <stop offset='40%' stop-color='#B16843' />
+      <stop offset='75%' stop-color='#8E4C2B' />
+      <stop offset='100%' stop-color='#683218' />
+    </linearGradient>
+
+    <linearGradient id='forearmGrad' x1='10%' y1='0%' x2='90%' y2='100%'>
+      <stop offset='0%' stop-color='#5A2C16' />
+      <stop offset='40%' stop-color='#965534' />
+      <stop offset='80%' stop-color='#BD7652' />
+      <stop offset='100%' stop-color='#844525' />
+    </linearGradient>
+
+    <!-- Athletic Shorts -->
+    <linearGradient id='shortsGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#1E293B' />
+      <stop offset='35%' stop-color='#0F172A' />
+      <stop offset='70%' stop-color='#090D16' />
+      <stop offset='100%' stop-color='#020408' />
+    </linearGradient>
+
+    <linearGradient id='shortsShadow' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#000000' stop-opacity='0.8' />
+      <stop offset='100%' stop-color='#000000' stop-opacity='0' />
+    </linearGradient>
+
+    <!-- Rim Lighting Filters -->
+    <linearGradient id='blueRim' x1='100%' y1='0%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#60A5FA' stop-opacity='0.45' />
+      <stop offset='15%' stop-color='#3B82F6' stop-opacity='0.2' />
+      <stop offset='100%' stop-color='#1D4ED8' stop-opacity='0' />
+    </linearGradient>
+
+    <!-- Bone Anatomy Gradients (Glowing X-Ray / Bio-Scan) -->
+    <linearGradient id='boneGrad' x1='30%' y1='0%' x2='70%' y2='100%'>
+      <stop offset='0%' stop-color='#FFFFFF' stop-opacity='0.85' />
+      <stop offset='35%' stop-color='#E0F2FE' stop-opacity='0.75' />
+      <stop offset='70%' stop-color='#BAE6FD' stop-opacity='0.6' />
+      <stop offset='100%' stop-color='#7DD3FC' stop-opacity='0.4' />
+    </linearGradient>
+
+    <!-- Joint Pain Red Glow Radiations -->
+    <radialGradient id='painGlowCore' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#FFF1F2' stop-opacity='1' />
+      <stop offset='20%' stop-color='#FDA4AF' stop-opacity='0.95' />
+      <stop offset='45%' stop-color='#F43F5E' stop-opacity='0.85' />
+      <stop offset='70%' stop-color='#E11D48' stop-opacity='0.65' />
+      <stop offset='85%' stop-color='#BE123C' stop-opacity='0.35' />
+      <stop offset='100%' stop-color='#881337' stop-opacity='0' />
+    </radialGradient>
+
+    <radialGradient id='painGlowWide' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#FF1E40' stop-opacity='0.65' />
+      <stop offset='30%' stop-color='#E11D48' stop-opacity='0.45' />
+      <stop offset='60%' stop-color='#BE123C' stop-opacity='0.25' />
+      <stop offset='85%' stop-color='#9F1239' stop-opacity='0.08' />
+      <stop offset='100%' stop-color='#4C0519' stop-opacity='0' />
+    </radialGradient>
+
+    <!-- Drop Shadows & Blur Filters -->
+    <filter id='deepBlur' x='-50%' y='-50%' width='200%' height='200%'>
+      <feGaussianBlur stdDeviation='35' />
+    </filter>
+    <filter id='mediumBlur' x='-30%' y='-30%' width='160%' height='160%'>
+      <feGaussianBlur stdDeviation='16' />
+    </filter>
+    <filter id='softBlur' x='-20%' y='-20%' width='140%' height='140%'>
+      <feGaussianBlur stdDeviation='8' />
+    </filter>
+    <filter id='glowShine'>
+      <feGaussianBlur stdDeviation='5' result='blur' />
+      <feMerge>
+        <feMergeNode in='blur' />
+        <feMergeNode in='SourceGraphic' />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Background -->
+  <rect width='1200' height='675' fill='url(#bgGrad)' />
+  <rect width='1200' height='675' fill='url(#spotlight)' />
+
+  <!-- Subtle Medical Ambient Grid Behind Subject -->
+  <g opacity='0.08'>
+    <circle cx='540' cy='360' r='180' fill='none' stroke='#38BDF8' stroke-width='1.5' stroke-dasharray='4 8' />
+    <circle cx='540' cy='360' r='270' fill='none' stroke='#38BDF8' stroke-width='1' stroke-dasharray='3 12' />
+    <circle cx='540' cy='360' r='380' fill='none' stroke='#38BDF8' stroke-width='1' stroke-dasharray='2 16' />
+  </g>
+
+  <!-- 2. ATHLETE BODY FIGURE -->
+  <!-- Left Leg (Background / Bent Back) -->
+  <g id='leftLeg' opacity='0.85'>
+    <!-- Left Thigh -->
+    <path d='M250,240 C280,260 360,330 380,410 C370,440 330,460 300,430 C270,390 220,310 210,250 Z' fill='url(#leftThighSkin)' />
+    <!-- Left Calf -->
+    <path d='M380,410 C390,480 370,580 340,675 C310,675 290,650 300,560 C320,490 340,430 360,420 Z' fill='url(#leftCalfSkin)' />
+  </g>
+
+  <!-- Left Arm / Hand Support -->
+  <path d='M390,120 C420,180 470,250 510,310 C490,320 460,310 440,260 C410,200 370,140 370,120 Z' fill='url(#forearmGrad)' />
+
+  <!-- Torso & Athletic Shorts -->
+  <g id='athleteTorso'>
+    <!-- Shorts Pelvis Area -->
+    <path d='M200,60 C300,70 480,80 570,90 C585,120 595,160 590,210 C560,240 500,260 460,255 C440,255 420,230 400,240 C360,255 270,260 210,230 C190,170 190,110 200,60 Z' fill='url(#shortsGrad)' />
+    
+    <!-- Right Leg Short Cuff -->
+    <path d='M395,200 C430,200 500,210 545,230 C535,265 470,285 415,270 C395,245 390,215 395,200 Z' fill='#0B111E' stroke='#1E293B' stroke-width='1.5' />
+    
+    <!-- Shorts Perforated Athletic Accents -->
+    <g opacity='0.25' fill='#94A3B8'>
+      <circle cx='430' cy='230' r='1.5'/><circle cx='440' cy='231' r='1.5'/><circle cx='450' cy='232' r='1.5'/><circle cx='460' cy='233' r='1.5'/><circle cx='470' cy='234' r='1.5'/>
+      <circle cx='435' cy='238' r='1.5'/><circle cx='445' cy='239' r='1.5'/><circle cx='455' cy='240' r='1.5'/><circle cx='465' cy='241' r='1.5'/>
+    </g>
+  </g>
+
+  <!-- Right Leg (Primary Focal Leg with Knee Pain) -->
+  <g id='rightLegPrimary'>
+    <!-- Right Thigh (Muscular Quadriceps contour) -->
+    <path d='M415,250 C440,255 520,270 540,285 C565,310 580,350 575,395 C555,420 525,435 480,430 C450,425 430,390 415,350 C405,310 405,270 415,250 Z' fill='url(#thighSkin)' />
+    
+    <!-- Quadriceps Muscle Definition & Highlight -->
+    <path d='M460,270 C510,290 545,335 540,380 C520,385 485,360 470,320 C455,290 455,275 460,270 Z' fill='#D1855E' opacity='0.35' />
+    <!-- Vastus Medialis Teardrop Highlight above knee -->
+    <path d='M450,345 C475,360 485,395 465,415 C445,415 440,380 445,350 Z' fill='#E0956E' opacity='0.3' />
+
+    <!-- Right Knee Joint Contour -->
+    <path d='M470,390 C530,390 575,415 565,470 C550,510 500,520 460,505 C435,485 435,425 470,390 Z' fill='url(#thighSkin)' />
+
+    <!-- Right Calf (Muscular Gastrocnemius & Tibia) -->
+    <path d='M550,480 C585,530 580,600 550,675 C520,675 490,675 480,660 C465,600 455,530 460,495 C485,505 525,505 550,480 Z' fill='url(#calfSkin)' />
+    <!-- Calf Muscle Volumetric Shadow -->
+    <path d='M460,510 C465,560 475,630 485,675 C475,675 460,670 455,640 C445,580 450,530 460,510 Z' fill='#542510' opacity='0.6' />
+    
+    <!-- Blue Rim Light on Outside Leg Profile -->
+    <path d='M545,240 C575,300 590,370 580,450 C575,500 595,570 560,675' fill='none' stroke='#38BDF8' stroke-width='4' opacity='0.4' filter='url(#softBlur)' />
+  </g>
+
+  <!-- 3. INTERNAL MEDICAL BONE STRUCTURE (Translucent Diagnostic Visualization) -->
+  <g id='internalBoneStructure' opacity='0.88'>
+    <!-- Femur (Thigh Bone Lower End - Condyles) -->
+    <path d='M495,355 C520,360 540,370 545,395 C548,415 530,430 515,432 C500,434 490,420 485,420 C480,420 470,434 455,432 C440,430 425,415 428,395 C432,370 455,360 475,355 Z' 
+          fill='url(#boneGrad)' stroke='#BAE6FD' stroke-width='2' filter='url(#glowShine)' opacity='0.8' />
+    
+    <!-- Articular Cartilage Joint Space -->
+    <path d='M438,432 C460,438 510,438 532,432 C530,440 508,446 485,446 C462,446 440,440 438,432 Z' 
+          fill='#38BDF8' opacity='0.75' filter='url(#glowShine)' />
+
+    <!-- Patella (Kneecap - Focal Pain Site) -->
+    <ellipse cx='485' cy='422' rx='28' ry='32' fill='url(#boneGrad)' stroke='#E0F2FE' stroke-width='2.5' filter='url(#glowShine)' opacity='0.92' />
+    <!-- Patellar Trabecular Texture lines -->
+    <path d='M470,412 C485,415 495,412 500,414 M468,422 C485,425 498,422 502,424 M472,432 C485,434 495,431 498,433' 
+          fill='none' stroke='#7DD3FC' stroke-width='1.2' opacity='0.6' />
+
+    <!-- Tibial Plateau (Shin Bone Upper End) -->
+    <path d='M435,448 C455,446 515,446 535,448 C542,460 530,475 515,480 C500,485 490,520 485,550 C480,520 470,485 455,480 C440,475 428,460 435,448 Z' 
+          fill='url(#boneGrad)' stroke='#BAE6FD' stroke-width='2' filter='url(#glowShine)' opacity='0.8' />
+
+    <!-- Fibula Head (Lateral Side) -->
+    <ellipse cx='538' cy='468' rx='10' ry='16' fill='url(#boneGrad)' stroke='#7DD3FC' stroke-width='1.5' opacity='0.7' />
+  </g>
+
+  <!-- 4. RADIATING RED PAIN EFFECT (Hyper-Focal Inflammation Nexus) -->
+  <g id='painGlowEffect'>
+    <!-- Deep Ambient Heat Flare -->
+    <circle cx='485' cy='426' r='160' fill='url(#painGlowWide)' filter='url(#deepBlur)' />
+    
+    <!-- Medium Joint Inflammation Flare -->
+    <circle cx='485' cy='426' r='100' fill='url(#painGlowWide)' filter='url(#mediumBlur)' />
+
+    <!-- Acoustic / Pain Wave Rings -->
+    <ellipse cx='485' cy='426' rx='65' ry='60' fill='none' stroke='#EF4444' stroke-width='2' opacity='0.75' stroke-dasharray='6 8' filter='url(#glowShine)' />
+    <ellipse cx='485' cy='426' rx='95' ry='88' fill='none' stroke='#F43F5E' stroke-width='1.5' opacity='0.55' stroke-dasharray='4 12' />
+    <ellipse cx='485' cy='426' rx='130' ry='120' fill='none' stroke='#E11D48' stroke-width='1' opacity='0.35' stroke-dasharray='3 16' />
+
+    <!-- Core Hot Pain Nexus -->
+    <circle cx='485' cy='426' r='52' fill='url(#painGlowCore)' filter='url(#softBlur)' />
+    <circle cx='485' cy='426' r='24' fill='#FFF1F2' opacity='0.85' filter='url(#glowShine)' />
+  </g>
+
+  <!-- 5. HANDS GRIPPING THE PAINFUL KNEE -->
+  <!-- Left Hand (Gripping from Top / Medial Side) -->
+  <g id='leftHandGrip'>
+    <!-- Left Forearm Coming Down from Above -->
+    <path d='M390,130 C430,220 450,290 440,350 C420,355 400,340 395,280 C390,220 375,150 390,130 Z' fill='url(#forearmGrad)' />
+    
+    <!-- Smartwatch / Fitness Tracker on Left Wrist -->
+    <rect x='410' y='275' width='44' height='22' rx='6' transform='rotate(18 432 286)' fill='#090D16' stroke='#334155' stroke-width='1.5' />
+    <rect x='422' y='279' width='20' height='14' rx='3' transform='rotate(18 432 286)' fill='#1E293B' />
+    <path d='M400,270 L460,290' stroke='#090D16' stroke-width='7' stroke-linecap='round' />
+
+    <!-- Left Palm & Thumb -->
+    <path d='M435,335 C450,340 480,345 490,365 C480,385 450,380 430,360 Z' fill='url(#handGrad)' />
+    <!-- Left Thumb Gripping Front of Patella -->
+    <path d='M470,360 C490,370 505,385 495,405 C480,415 465,395 460,375 Z' fill='url(#handGrad)' stroke='#5C2A12' stroke-width='0.8' />
+    
+    <!-- Fingers 2, 3, 4, 5 Curving Around Medial Knee -->
+    <path d='M438,360 C445,380 445,410 435,430 C425,430 420,410 425,385 Z' fill='#9E5835' stroke='#5C2A12' stroke-width='0.8' />
+    <path d='M425,370 C432,390 432,420 420,440 C410,440 405,420 412,390 Z' fill='#8A4828' stroke='#5C2A12' stroke-width='0.8' />
+  </g>
+
+  <!-- Right Hand (Gripping from Right / Lateral Side) -->
+  <g id='rightHandGrip'>
+    <!-- Right Forearm Reaching Across -->
+    <path d='M680,260 C640,300 590,350 550,380 C535,365 545,340 580,310 C620,270 655,245 680,260 Z' fill='url(#forearmGrad)' />
+    
+    <!-- Right Palm -->
+    <path d='M555,365 C575,375 580,405 565,425 C545,435 530,410 540,380 Z' fill='url(#handGrad)' />
+    
+    <!-- Right Fingers Gripping Lateral Aspect of Knee -->
+    <!-- Index Finger -->
+    <path d='M550,390 C535,400 515,402 510,415 C512,425 528,422 545,410 Z' fill='#BA724D' stroke='#5C2A12' stroke-width='0.8' />
+    <!-- Middle Finger -->
+    <path d='M555,405 C540,418 520,422 515,435 C520,445 535,440 550,425 Z' fill='#A8623E' stroke='#5C2A12' stroke-width='0.8' />
+    <!-- Ring Finger -->
+    <path d='M558,420 C545,435 528,440 525,452 C530,460 545,455 558,440 Z' fill='#965230' stroke='#5C2A12' stroke-width='0.8' />
+    <!-- Little Finger -->
+    <path d='M562,438 C552,450 538,455 535,465 C540,472 552,468 562,455 Z' fill='#844324' stroke='#5C2A12' stroke-width='0.8' />
+  </g>
+
+  <!-- 6. CINEMATIC LIGHTING & FINISHING TOUCHES -->
+  <!-- Top Specular Highlight on Knee Peak -->
+  <ellipse cx='480' cy='395' rx='35' ry='12' fill='#FFFFFF' opacity='0.18' filter='url(#softBlur)' />
+  
+  <!-- Subtle Medical Crosshair Target Over Focal Area -->
+  <g opacity='0.3'>
+    <line x1='485' y1='335' x2='485' y2='375' stroke='#38BDF8' stroke-width='1.5' stroke-dasharray='2 4' />
+    <line x1='485' y1='475' x2='485' y2='515' stroke='#38BDF8' stroke-width='1.5' stroke-dasharray='2 4' />
+    <line x1='395' y1='426' x2='435' y2='426' stroke='#38BDF8' stroke-width='1.5' stroke-dasharray='2 4' />
+    <line x1='535' y1='426' x2='575' y2='426' stroke='#38BDF8' stroke-width='1.5' stroke-dasharray='2 4' />
+  </g>
+
+  <!-- Dark Outer Vignette -->
+  <rect width='1200' height='675' fill='none' stroke='#020617' stroke-width='40' opacity='0.8' />
+</svg>
+</body>
+</html>

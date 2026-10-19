@@ -1,0 +1,6 @@
+{
+  "name": "J Square Lab & Diagnostic Centre",
+  "description": "Trusted Diagnostic Care for You & Your Family. Free doorstep sample collection across Mumbai & Navi Mumbai with accurate, doctor-verified lab reports in 6–12 hours.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
